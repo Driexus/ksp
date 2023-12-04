@@ -1,5 +1,6 @@
 import com.google.devtools.ksp.configureKtlint
 import com.google.devtools.ksp.configureKtlintApplyToIdea
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val sonatypeUserName: String? by project
 val sonatypePassword: String? by project
@@ -125,4 +126,15 @@ subprojects {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
         compilerOptions.freeCompilerArgs.add("-Xskip-prerelease-check")
     }
+}
+dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "17"
+}
+val compileTestKotlin: KotlinCompile by tasks
+compileTestKotlin.kotlinOptions {
+    jvmTarget = "17"
 }

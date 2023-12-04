@@ -1,5 +1,6 @@
 package com.example
 
+import GreaterThan
 import HELLO
 
 fun main() {
@@ -14,6 +15,11 @@ fun main() {
         .withD(hello)
     val aClass : AClass = builder.build()
     println(aClass.foo())
+
+    val test = GymDataQueryable(
+        lat = GreaterThan(5.0)
+    )
+    //test.lat = GreaterThan(5.0)
 }
 
 
