@@ -5,4 +5,6 @@ open class MockQuery {
     fun whereLessThan(a: String, b: Any) : MockQuery = this
 
     fun whereEqualTo(a: String, b: Any) : MockQuery = this
+
+    fun get(result: (String) -> Unit) = result("")
 }
