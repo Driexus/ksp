@@ -16,9 +16,9 @@ fun main() {
     val aClass : AClass = builder.build()
     println(aClass.foo())
 
-    val test = GymDataQueryable(
+    /*val test = GymDataQueryable(
         lat = GreaterThan(5.0)
-    )
+    )*/
     //test.lat = GreaterThan(5.0)
 }
 

@@ -3,7 +3,7 @@ package com.example
 import com.example.annotation.FirestoreQueryable
 import java.sql.Timestamp
 
-@FirestoreQueryable
+//@FirestoreQueryable
 data class GymData constructor(
     val name: String? = null,
     val owner: String? = null,
